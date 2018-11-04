@@ -1,0 +1,30 @@
+【客户端设计思路】
+Scripts
+	[Game]
+		GameController			游戏控制器--控制游戏的运行,本身也是个状态机,结合C#事件委托进行游戏事件的调度
+		GameData				保存客户端游戏数据
+		GameOver				游戏结束控制器
+		GameState				游戏状态
+	[GUI]
+		GUIController			进入界面控制器
+		PannelController		游戏运行时数据显示面板
+		RichTextString          封装的一个用于Unity的富文本字符串,省去了拼接富文本标签的麻烦
+	[Model]
+		AddBlood				加血操作
+		AddBullet               加子弹操作
+		BulletController        子弹控制器
+		Enemy                   怪物类
+		PlayerController        主角控制器
+		SkeletonController      怪物控制器
+		ShootController         AK-47射击控制器
+	[Network]
+		Message                 可序列化消息基类
+		NetData					与游戏操作相关的RPC方法--暂未使用,使用基本消息类型进行了代替
+		NetStream               网络数据流,用来进行TCP通信
+		NetworkController       网络控制器,供其他控制器使用
+		RPCProxy                RPC代理
+	[Shaders]
+		BumpLightMap            灯光的渲染代码
+
+【功能点】
+仅完成了作业要求的功能点
